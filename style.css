@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2';
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.container {
+    height: 500px;
+    width: 400px;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(120deg, rgb(16, 236, 181), rgb(130, 59, 207));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px pink;
+}
+
+.search {
+    padding: 20px;
+    display: flex;
+    height: 100px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 270px;
+    margin-left: 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(250, 250, 250);
+
+}
+
+.search input:hover {
+    border: 2px solid grey;
+}
+
+.search i {
+    margin: 20px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 250, 250);
+    color: rgb(21, 115, 170);
+    border-radius: 50%;
+}
+
+.search i:hover {
+    cursor: pointer;
+}
+
+.status {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+
+
+}
+
+.temperature {
+    height: 80px;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.weather {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 5s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.city {
+    color: white;
+    height: 50px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conditions {
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    color: white;
+}
+
+.conditions .humidity {
+    margin-left: 20px;
+}
+
+.conditions .humidity::before {
+    content: '';
+    background-image: url(images/humidity.png);
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    transform: translateX(-45px);
+}
+
+.conditions .wind-speed {
+    margin-left: 20px;
+}
+
+.conditions .wind-speed::before {
+    content: '';
+
+    background-image: url(images/wind.png);
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    transform: translateX(-45px);
+    z-index: 1000;
+
+
+}
+
+img {
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+}
